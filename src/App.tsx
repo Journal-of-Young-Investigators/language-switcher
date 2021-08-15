@@ -17,23 +17,6 @@ interface jyiArticle {
   content: jyiArticleContent[];
 };
 
-function ParseText(text: string) {
-  const h3Open = '<h3>';
-  const h3Close = '</h3>';
-  const pOpen = '<p>';
-  const pClose = '</p>';
-  
-  let lines = text.split('\n');
-  let output = '';
-  output = h3Open + lines[0] + h3Close + '\n';
-
-  for (let i = 1; i < lines.length; i++) {
-    if (lines[i] == 'References:') break;
-    output += pOpen + '\n' + lines[i] + '\n' + pClose + '\n';
-  }
-  return output;
-}
-
 type MyState = {
   articleText: string;
 }
@@ -42,6 +25,17 @@ class App extends React.Component<jyiArticle, MyState> {
 
   state: MyState = {
     articleText: ''
+  }
+
+  componentDidMount() {
+    for (let i = 0; i < this.props.content.length; i++) {
+      if (this.props.content[i].langCode === 'en') {
+        this.setState({
+          articleText: this.props.content[i].text
+        });
+        break;
+      }
+    }
   }
 
   handleClick = (event: React.MouseEvent<HTMLDivElement>) => {
@@ -53,16 +47,26 @@ class App extends React.Component<jyiArticle, MyState> {
         break;
       }
     }
+    
+    const langTabs = document.getElementsByClassName("lang-option");
+    for (let i = 0; i < langTabs.length; i++) {
+      if (langTabs[i].getAttribute("lang") === event.currentTarget.lang) {
+        langTabs[i].setAttribute("lang-status", "on");
+      }
+      else {
+        langTabs[i].setAttribute("lang-status", "off");
+      }
+    }
   }
   
   render() {
     return (
       <div>
         <div className="lang-options">
-          <div className="lang-option" lang="en" onClick={this.handleClick}>
+          <div className="lang-option" lang="en" lang-status="on" onClick={this.handleClick}>
             English
           </div>
-          <div className="lang-option" lang="es" onClick={this.handleClick}>
+          <div className="lang-option" lang="es" lang-status="off" onClick={this.handleClick}>
             Español
           </div>
         </div>
@@ -70,7 +74,6 @@ class App extends React.Component<jyiArticle, MyState> {
           {this.state.articleText}
         </div>
       </div>
-
     );
   }
 }
