@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import LanguageSwitcher from './App';
 import reportWebVitals from './reportWebVitals';
 
 interface jyiArticleContent {
@@ -18,7 +18,8 @@ interface jyiArticle {
 };
 
 let testjyiArticleContent: jyiArticleContent[] = [
-  {langCode: 'en', text: 'english text'}, {langCode: 'es', text: 'spanish text'}
+  {langCode: 'en', text: 'This is an example of text in English'}, 
+  {langCode: 'es', text: 'Este es un ejemplo de texto en español'}
 ]
 
 let testjyiArticle: jyiArticle = {
@@ -28,7 +29,7 @@ let testjyiArticle: jyiArticle = {
 
 ReactDOM.render(
   <React.StrictMode>
-    <App id={testjyiArticle.id} content={testjyiArticle.content}/>
+    <LanguageSwitcher article={testjyiArticle}/>
   </React.StrictMode>,
   document.getElementById('root')
 );

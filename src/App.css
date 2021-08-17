@@ -18,3 +18,10 @@
   background-color: #011e48;
   color: white;
 }
+
+.article-text {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}

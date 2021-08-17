@@ -1,5 +1,4 @@
 import React from 'react';
-import { isBreakOrContinueStatement } from 'typescript';
 import './App.css';
 
 interface jyiArticleContent {
@@ -17,21 +16,25 @@ interface jyiArticle {
   content: jyiArticleContent[];
 };
 
+type MyProps = {
+  article: jyiArticle
+}
+
 type MyState = {
   articleText: string;
 }
 
-class App extends React.Component<jyiArticle, MyState> {
+class LanguageSwitcher extends React.Component<MyProps, MyState> {
 
   state: MyState = {
     articleText: ''
   }
 
   componentDidMount() {
-    for (let i = 0; i < this.props.content.length; i++) {
-      if (this.props.content[i].langCode === 'en') {
+    for (let i = 0; i < this.props.article.content.length; i++) {
+      if (this.props.article.content[i].langCode === 'en') {
         this.setState({
-          articleText: this.props.content[i].text
+          articleText: this.props.article.content[i].text
         });
         break;
       }
@@ -39,10 +42,10 @@ class App extends React.Component<jyiArticle, MyState> {
   }
 
   handleClick = (event: React.MouseEvent<HTMLDivElement>) => {
-    for (let i = 0; i < this.props.content.length; i++) {
-      if (this.props.content[i].langCode === event.currentTarget.lang) {
+    for (let i = 0; i < this.props.article.content.length; i++) {
+      if (this.props.article.content[i].langCode === event.currentTarget.lang) {
         this.setState({
-          articleText: this.props.content[i].text
+          articleText: this.props.article.content[i].text
         });
         break;
       }
@@ -70,7 +73,7 @@ class App extends React.Component<jyiArticle, MyState> {
             Español
           </div>
         </div>
-        <div className="body">
+        <div className="article-text">
           {this.state.articleText}
         </div>
       </div>
@@ -78,4 +81,4 @@ class App extends React.Component<jyiArticle, MyState> {
   }
 }
 
-export default App;
+export default LanguageSwitcher;
