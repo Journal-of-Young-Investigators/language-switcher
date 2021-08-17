@@ -14,7 +14,7 @@
   border-radius: 0.25em;
 }
 
-.lang-option[lang-status="on"] {
+.lang-option[current-lang="true"] {
   background-color: #011e48;
   color: white;
 }

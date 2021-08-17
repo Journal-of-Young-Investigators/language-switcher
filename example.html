@@ -1,0 +1,231 @@
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+	box-sizing: border-box;
+}
+  
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.lang-switcher {
+    width: auto;
+	overflow: hidden;
+}
+
+.lang-tabs {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+	align-items: stretch;
+}
+
+.lang-tab {
+    padding: 0.5em;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-end;
+	align-items: center;
+	
+  	border-radius: 0.25em;
+	background-color: white;
+	color: black;
+}
+
+.lang-tab[lang-status="on"] {
+	background-color: #011e48;
+	color: white;
+}
+
+.lang-tab:hover {
+    background-color: lightgrey;
+	color: black;
+}
+
+.lang-options {
+}
+
+.lang-content {
+	padding: 0.5em 0;
+}
+
+.lang-content .date {
+	margin: 0 0 2em 0;  
+}
+  
+.lang-content h3 {
+  	margin: 0;
+	padding: 0;  
+}
+
+.lang-content a {
+  color: blue;
+}
+  
+.lang-content p {
+   	margin: 1em 0;
+ 	text-indent: 2em; 	
+}
+
+.lang-content[lang-status="off"] {
+    display: none;
+}
+
+</style>
+
+<div class="lang-switcher" id="yui_3_17_2_1_1618263928144_247">
+
+	<div class="lang-tabs" id="yui_3_17_2_1_1618263928144_246">
+
+		<div class="lang-tab" lang-opt="lang-en" lang-status="on" onclick="langSwitch(this)" id="yui_3_17_2_1_1618263928144_250" lang="en">English</div>
+		<div class="lang-tab" lang-opt="lang-es" lang-status="off" onclick="langSwitch(this)" id="yui_3_17_2_1_1618263928144_245" lang="fr">Español</div>
+	</div>
+
+	<div class="lang-options">
+      
+		<div class="lang-content" lang-opt="lang-en" lang-status="on" lang="en">
+          <h3>Syed Haider</h3>
+          <p>
+            Drug development is one of the largest industries in the world. A significant amount of resources and time is invested into to produce drugs for clinical use. Equally important is the process of drug delivery and targeting by which the synthesized compounds are delivered to tissues in the body. As reported by Transparency Market Research in 2018, the drug delivery market is rapidly rising and is expected to be worth US $900 billion by 2025. 
+          </p>
+		  <p>
+			Drugs can be delivered into the body in multiple methods. These include topical, intranasal, oral, sublingual, and IV to mention a few. Following delivery, conventional drug targeting utilizes either direct targeting, in which the drug directly makes it way to the target tissue without carriers, or encapsulation method in which a drug is coated with molecules that act as carriers. However, these techniques have multiple limitations. The most substantial limitation is that these drugs cannot reach their target or are degraded en route. One of the hardest targets to reach is the brain as the blood-brain barrier is very restrictive making neurological targeting very difficult. Although it proves useful in protection against infection and hazardous chemicals, it is also very proficient at excluding medicine. Emerging drug delivery systems, like nanoparticles, show promise in overcoming the challenges faced by these traditional drug delivery methods.
+		  </p>
+          <p>
+            Nanoparticles are defined by their size which is on the scale of 1 to 100 nm. In everyday language, if a human cell is imagined to be a football stadium, a nanoparticle would be a tennis ball on the field. Nanoparticles are quite diverse as they could be composed of organic compounds, such as carbon nanotubes, or inorganic materials, such as metallic ions. The type of material used influences stability and allows different drugs to be targeted. 
+          </p>
+		  <p>
+			This tiny size makes these particles distinct as they can provide exceedingly effective drug delivery to the remote regions within the human body. In addition, it allows nanoparticles to make the journey of drugs that are being carried by blood into the brain more efficient. Scientists at Cedars-Sinai Medical Center developed a nanoparticle that can cross the blood brain barrier in a mouse to deliver drugs with high specificity. The authors further indicated that the conjugated nanoparticles, nanoparticles connected other molecules, cross the blood brain barrier more efficiently than traditional methods. Furthermore, conjugating molecules that have a high affinity for different brain tissues can further increase delivery across the blood brain barrier.
+		  </p>
+		  <p>
+			However, challenges remain in nanoparticle-based brain targeting. Israel L. et al (2019) noted that nanoparticle delivery is dependent on the presence of blood vessels in close proximity to the targeted tissue. The lack of vessels of certain regions of the brain makes them virtually inaccessible by nanoparticles. The researchers have now begun to focus on the nanoparticle delivery to these inaccessible regions.
+		  </p>
+		  <p>
+			Nanoparticles can even target different organelles within the cell. The particles have the potential to penetrate within the cellular structure and reach as far as the nucleus, where the genetic material of the cell is housed as shown by researchers at the University of Science and Technology of China. Using a modified nanoparticle which includes a C5N2 group and a nuclear localization signal that helps to increase stability and direct toward the nucleus, respectively. Chen et al (2019) found that this particle was not only capable of delivering molecular dyes and drugs to the nucleus but could provide enhanced antitumor capacities in mice compared to conventional chemotherapy and non-nucleus targeting nanoparticle chemotherapy. The researchers believe this new targeting methodology may open door for the development of therapy with enhanced antitumor activity.
+		  </p>
+		  <p>
+			Currently the mitochondria, the main energy source of the body, remains one of the most difficult structures to target inside the cell. Many mitochondrial pathologies exist have debilitating consequences. For example, mitochondrial myopathy, a neuromuscular disease caused by damage to the mitochondria, causes a multitude of symptoms including heart failure and deafness. These pathologies are essentially incurable due to the difficulty in mitochondrial targeting. The promising results of nanoparticle based nuclear targeting may translate to mitochondrial targeting hence the focus of many nanoparticle-focused laboratories around the world.
+		  </p>
+		  <p>
+			The use of nanoparticles for drug delivery systems is not without its challenges. Despite the advantages, a relatively small number of nanoparticles have been approved for clinical use. The biggest hurdle impeding nanoparticle-based targeting is the complexity in designing the multicomponent three-dimensional constructs. For example, detailed understanding of the components and their interactions in cellular structures is required before nanoparticle-based medicine can be used in the clinical setting.
+		  </p>
+		  <p>
+			Furthermore, nanoparticles come in many flavors; physical characteristics such as size, shape, surface area, and volume vary significantly between individual particles. Finding the correct particle for the intended use plays an important role in targeting drugs efficiently and reducing side effects. For example, one nanoparticle may be useful in targeting only a subset of drugs with particular chemical properties while other nanoparticles make require additional stabilizing compounds for drug trafficking . Therefore, finding the correct particle for a particular drug can prove to be quite challenging and often proves to be the bottleneck in nanoparticle-based drug trafficking research.
+		  </p>
+		  <p>
+			Another major challenge researchers face is the delivery of nanoparticles to solid tumors. Tumor microenvironments are highly complex and heterogeneous with variable vasculature - the distribution of blood and lymph vessels around the tumor. Certain large solid tumor regions, especially the core, are poorly vascularized. As a result, the passage of nanoparticles to these regions is heavily limited. Furthermore, the presence of dense collagen, a mesh of gelatinous protein, trap any further nanoparticles, preventing them from making their way deeper into the tumor. As a result of these setbacks, current research in the field of nanoparticles-based tumor drug delivery is now focused on “active” targeting of nanoparticles to the target rather than the traditional “passive”. By conjugating antibodies that have affinity for specific regions in the body, researchers hope to actively target the inaccessible tumor regions onto the particles rather than passively relying on nanoparticles to reach the target by themselves.
+		  </p>
+		  <p>
+			Despite these challenges, nanoparticles hold a lot of potential for drug delivery. The development of better and more predictive pre-clinical animal models coupled with a better understanding of biology can help improve the nanoparticle-based drug targeting. Ultimately, cross collaboration with theoretical and experimental scientists across academia, medicine, and the pharmaceutical industry will help translate findings from the lab to better ways to target diseases.
+		  </p>
+		  <p>
+            References:
+          </p>
+          <ol>
+            <li><p>
+              	Chen, W., Liu, J., Wang, Y., Jiang, C., Yu, B., Sun, Z., Lu, L. (2019). A C5N2 Nanoparticle Based Direct Nucleus Delivery Platform for Synergistic Cancer Therapy. Angewandte Chemie International Edition, 58 (19), 6260-6294, available: https://doi.org/10.1002/anie.201900884.
+			</p></li>
+            <li><p>
+				Israel, L. L., Braubach, O., Galstyan, A., Chiechi, A., Shatalova, E. S., Grodzinski, Z., Ding, H., Black, K. L., Ljubimova, J. Y., Holler, E. (2019). A Combination of Tri-Leucine and Angiopep-2 Drives a Polyanionic Polymalic Acid Nanodrug Platform Across the Blood–Brain Barrier. ACS Nano, 13(2), 1253-1271, available: https://doi.org/10.1021/acsnano.8b06437.
+            </p></li>
+			<li><p>
+				Rosemblum, D., Joshi, N., Tao, W., Karp, J. M., Peer, D. (2018). Progress and challenges towards targeted delivery of cancer therapeutics. Nature Communications, 9, 1410, available: https://www.nature.com/articles/s41467-018-03705-y.
+            </p></li>
+			<li><p>
+				Tiwari, G., Tiwari, R., Sriwastawa, B., Bhati, L., Pandey, S., Pandey, P., Bannerjee, S. K. (2012).  Drug delivery systems: An updated review. International Journal of Pharmaceutical Investigation, 2(1), 2–11, available: http://www.jpionline.org/index.php/ijpi/article/view/58.
+            </p></li>
+          </ol>
+		</div>
+
+		<div class="lang-content" lang-opt="lang-es" lang-status="off" lang="es">
+		  <h2>Nanopartículas: el futuro de la administración de fármacos</h2>
+          <div class="date">
+            1 de enero, 2020
+          </div>
+		  <h3>ESCRITO POR SYED HAIDER</h3>
+          <h3>TRADUCIDO POR CARINA BRIZUELA</h3>
+		  <p>Diagrama de nanopartículas atribuido a W. Long, Y. Yi, S. Chen, Q. Cao, W. Zhao y Q. Liu [CC BY 4.0].</p>
+          <p>
+            El desarrollo de medicamentos es una de las mayores industrias del mundo. Se invierte una gran cantidad de recursos y tiempo en la producción de fármacos para su uso clínico. Igual de importante es la administración dirigida de fármacos, proceso mediante el cual los compuestos sintetizados llegan a los tejidos del cuerpo. Como informó Transparency Market Research en 2018, el mercado de la administración de medicamentos está aumentando rápidamente y se espera que tenga un valor de 900 mil millones de dólares para el 2025. 
+          </p>
+		  <p>
+			Los fármacos pueden introducirse en el organismo a través de múltiples métodos. Algunos ejemplos son la administración tópica, intranasal, oral, sublingual e intravenosa. Luego, la administración dirigida de fármacos puede ser directa (el fármaco llega directamente al tejido diana sin portadores) o puede realizarse a través del método de encapsulación, que consiste en recubrir un fármaco con moléculas que actúan como portadores. Sin embargo, estas técnicas tienen múltiples limitaciones. La más importante es que estos fármacos no puedan alcanzar su objetivo o se degraden en el camino. Una de las dianas más difíciles de alcanzar es el cerebro, ya que la barrera hematoencefálica es muy restrictiva, lo que dificulta mucho la administración dirigida en esta área. Aunque resulta útil en la protección contra las infecciones y las sustancias químicas peligrosas, también es muy eficiente para expulsar medicamentos. Los nuevos sistemas de administración de fármacos, como las nanopartículas, tienen potencial para superar los problemas que plantean estos métodos tradicionales de administración de fármacos.
+		  </p>
+          <p>
+            Las nanopartículas se definen por su tamaño, que está en la escala de 1 a 100 nm. En lenguaje cotidiano, si comparáramos una célula humana con un estadio de fútbol, una nanopartícula sería una pelota de tenis en el campo. Las nanopartículas son muy diversas, ya que pueden estar formadas por compuestos orgánicos, como los nanotubos de carbono, o por materiales inorgánicos, como los iones metálicos. El tipo de material utilizado influye en la estabilidad y permite focalizar diferentes fármacos. 
+          </p>
+		  <p>
+			Este diminuto tamaño hace que estas partículas sean distintas, ya que permiten suministrar fármacos de forma muy eficaz a las regiones remotas del cuerpo humano. Además, el tamaño permite a las nanopartículas optimizar el viaje de los fármacos que son transportados por la sangre hasta el cerebro. Los científicos del Centro Médico Cedars-Sinai desarrollaron una nanopartícula capaz de atravesar la barrera hematoencefálica en un ratón para administrar fármacos con gran especificidad. Los autores también indicaron que las nanopartículas conjugadas, es decir, nanopartículas conectadas a otras moléculas, atraviesan la barrera hematoencefálica con mayor eficacia que los métodos tradicionales. Además, la conjugación de moléculas con gran afinidad por los distintos tejidos cerebrales puede potenciar aún más la administración a través de la barrera hematoencefálica.
+		  </p>
+		  <p>
+			Sin embargo, aún existen desafíos en la administración dirigida al cerebro basada en nanopartículas. Israel L. et al (2019) señaló que el método de las nanopartículas depende de la presencia de vasos sanguíneos en la proximidad del tejido objetivo. La falta de vasos de ciertas regiones del cerebro las hace prácticamente inaccesibles para las nanopartículas. Los investigadores han comenzado a centrarse en la administración por medio de nanopartículas en estas regiones inaccesibles.
+		  </p>
+		  <p>
+			Las nanopartículas pueden incluso dirigirse a diferentes orgánulos dentro de la célula. Según han demostrado los investigadores de la Universidad de Ciencia y Tecnología de China, las partículas tienen el potencial de penetrar dentro de la estructura celular y llegar hasta el núcleo, donde se encuentra el material genético de la célula. Utilizando una nanopartícula modificada con un grupo C5N2 y una señal de focalización nuclear que, respectivamente, ayuda a aumentar la estabilidad y la dirección hacia el núcleo, Chen et al. (2019) descubrió que esta partícula no solo era capaz de llevar tintes moleculares y fármacos al núcleo, sino que podía proporcionar mayores capacidades antitumorales en ratones en comparación con la quimioterapia convencional y la quimioterapia con nanopartículas no dirigidas al núcleo.  Los investigadores creen que esta nueva metodología de administración dirigida puede abrir la puerta al desarrollo de una terapia con mayor actividad antitumoral.
+
+		  </p>
+		  <p>
+			En la actualidad, la mitocondria, principal fuente de energía del organismo, sigue siendo una de las estructuras más difíciles de tratar dentro de la célula. Existen muchas patologías mitocondriales que tienen consecuencias debilitantes. Por ejemplo, la miopatía mitocondrial, una enfermedad neuromuscular causada por daños en las mitocondrias, provoca un sinfín de síntomas, como insuficiencia cardíaca y sordera. Estas patologías son esencialmente incurables debido a la dificultad de la focalización mitocondrial. Los prometedores resultados de la focalización nuclear basada en las nanopartículas pueden trasladarse a la focalización mitocondrial, de ahí el interés de muchos laboratorios centrados en las nanopartículas en todo el mundo.
+		  </p>
+		  <p>
+			El uso de nanopartículas para sistemas de administración de fármacos no está exento de dificultades. A pesar de sus ventajas, un número relativamente pequeño de nanopartículas ha sido aprobado para su uso clínico. El mayor obstáculo que impide el uso de nanopartículas es la complejidad del diseño de las construcciones tridimensionales multicomponentes. Por ejemplo, antes de que la medicina basada en nanopartículas pueda utilizarse en el ámbito clínico, es necesario conocer en detalle los componentes y sus interacciones en las estructuras celulares.
+		  </p>
+		  <p>
+			Además, existen nanopartículas de muchos tipos y sus características físicas, como el tamaño, la forma, la superficie y el volumen, varían considerablemente de una partícula a otra. Encontrar la partícula correcta para el uso deseado es importante a la hora de dirigir los fármacos con eficiencia y reducir los efectos secundarios. Por ejemplo, una nanopartícula puede ser útil para focalizar solo a un subconjunto de fármacos con propiedades químicas particulares, mientras que otras nanopartículas requieren compuestos estabilizadores adicionales para la administración dirigida de fármacos. Por lo tanto, encontrar la partícula correcta para un fármaco concreto puede resultar todo un reto y a menudo esta es la dificultad que obstaculiza la investigación sobre la administración de fármacos basado en nanopartículas.
+		  </p>
+		  <p>
+			Otro reto importante al que se enfrentan los investigadores es la administración de nanopartículas en tumores sólidos. Los microambientes tumorales son muy complejos y heterogéneos, y presentan una vasculatura variable: la distribución de los vasos sanguíneos y linfáticos alrededor del tumor. Algunas regiones que generan tumores sólidos de gran tamaño, especialmente el núcleo, están poco vascularizadas. En consecuencia, el transporte de las nanopartículas a estas regiones se encuentra muy limitado. Además, la presencia de colágeno denso, una malla de proteínas gelatinosas, atrapa cualquier otra nanopartícula, impidiendo que se abra paso hacia el interior del tumor. Como consecuencia de estos obstáculos, la investigación actual en el campo de la administración de fármacos tumorales basados en nanopartículas se centra ahora en la focalización "activa" de las nanopartículas hacia la diana, en lugar del tradicional método "pasivo". Al conjugar anticuerpos que tienen afinidad por pertenecer regiones específicas del cuerpo, los investigadores esperan poder llegar a las regiones tumorales inaccesibles mediante las partículas en lugar de confiar pasivamente en que las nanopartículas alcancen el objetivo por sí mismas.
+		  </p>
+		  <p>
+			A pesar de estos retos, las nanopartículas tienen un gran potencial para la administración dirigida de fármacos. El desarrollo de modelos animales preclínicos mejores y más predictivos, junto con una mejor comprensión de la biología, puede ayudar a mejorar la administración dirigida de los fármacos basada en nanopartículas. En última instancia, la colaboración transversal con científicos teóricos y experimentales del mundo académico, de la medicina y de la industria farmacéutica ayudará a traducir los descubrimientos del laboratorio en mejores formas de abordar las enfermedades.
+		  </p>
+		  <p>
+            References:
+          </p>
+          <ol>
+            <li><p>
+              	Chen, W., Liu, J., Wang, Y., Jiang, C., Yu, B., Sun, Z., Lu, L. (2019). A C5N2 Nanoparticle Based Direct Nucleus Delivery Platform for Synergistic Cancer Therapy. Angewandte Chemie International Edition, 58 (19), 6260-6294, available: https://doi.org/10.1002/anie.201900884.
+			</p></li>
+            <li><p>
+				Israel, L. L., Braubach, O., Galstyan, A., Chiechi, A., Shatalova, E. S., Grodzinski, Z., Ding, H., Black, K. L., Ljubimova, J. Y., Holler, E. (2019). A Combination of Tri-Leucine and Angiopep-2 Drives a Polyanionic Polymalic Acid Nanodrug Platform Across the Blood–Brain Barrier. ACS Nano, 13(2), 1253-1271, available: https://doi.org/10.1021/acsnano.8b06437.
+            </p></li>
+			<li><p>
+				Rosemblum, D., Joshi, N., Tao, W., Karp, J. M., Peer, D. (2018). Progress and challenges towards targeted delivery of cancer therapeutics. Nature Communications, 9, 1410, available: https://www.nature.com/articles/s41467-018-03705-y.
+            </p></li>
+			<li><p>
+				Tiwari, G., Tiwari, R., Sriwastawa, B., Bhati, L., Pandey, S., Pandey, P., Bannerjee, S. K. (2012).  Drug delivery systems: An updated review. International Journal of Pharmaceutical Investigation, 2(1), 2–11, available: http://www.jpionline.org/index.php/ijpi/article/view/58.
+            </p></li>
+          </ol>
+		</div>
+		
+	</div>
+
+</div>
+
+<script>
+	function langSwitch(e) {
+	
+		const langTabs = document.getElementsByClassName("lang-tab");
+		for (i = 0; i < langTabs.length; i++) {
+			if (langTabs[i].getAttribute("lang-opt") !== e.getAttribute("lang-opt")) {
+				langTabs[i].setAttribute("lang-status", "off");
+			} else {
+				langTabs[i].setAttribute("lang-status", "on");
+			}
+		}
+		
+		const langContents = document.getElementsByClassName("lang-content");
+		for (i = 0; i < langContents.length; i++) {
+			
+			if (langContents[i].getAttribute("lang-opt") !== e.getAttribute("lang-opt")) {
+				langContents[i].setAttribute("lang-status", "off");
+			} else {
+				langContents[i].setAttribute("lang-status", "on");
+			}
+		}
+	}
+</script>

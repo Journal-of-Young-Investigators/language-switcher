@@ -21,60 +21,37 @@ type MyProps = {
 }
 
 type MyState = {
-  articleText: string;
+  article: jyiArticle,
+  currentLang: string,
 }
 
 class LanguageSwitcher extends React.Component<MyProps, MyState> {
 
   state: MyState = {
-    articleText: ''
-  }
-
-  componentDidMount() {
-    for (let i = 0; i < this.props.article.content.length; i++) {
-      if (this.props.article.content[i].langCode === 'en') {
-        this.setState({
-          articleText: this.props.article.content[i].text
-        });
-        break;
-      }
-    }
-  }
+    article: this.props.article,
+    currentLang: 'en',
+  };
 
   handleClick = (event: React.MouseEvent<HTMLDivElement>) => {
-    for (let i = 0; i < this.props.article.content.length; i++) {
-      if (this.props.article.content[i].langCode === event.currentTarget.lang) {
-        this.setState({
-          articleText: this.props.article.content[i].text
-        });
-        break;
-      }
-    }
-    
-    const langTabs = document.getElementsByClassName("lang-option");
-    for (let i = 0; i < langTabs.length; i++) {
-      if (langTabs[i].getAttribute("lang") === event.currentTarget.lang) {
-        langTabs[i].setAttribute("lang-status", "on");
-      }
-      else {
-        langTabs[i].setAttribute("lang-status", "off");
-      }
-    }
-  }
+    this.setState({ currentLang: event.currentTarget.lang });
+  };
   
   render() {
     return (
       <div>
         <div className="lang-options">
-          <div className="lang-option" lang="en" lang-status="on" onClick={this.handleClick}>
-            English
-          </div>
-          <div className="lang-option" lang="es" lang-status="off" onClick={this.handleClick}>
-            Español
-          </div>
+          {
+            this.state.article.content.map( ( content: jyiArticleContent) => {
+              return <div className="lang-option" lang={content.langCode} onClick={this.handleClick} current-lang={ ((this.state.currentLang === content.langCode) ? "true" : "false")}>
+                {content.langCode}
+              </div>
+            })
+          }
         </div>
         <div className="article-text">
-          {this.state.articleText}
+          {this.state.article.content.map( ( content: jyiArticleContent ) => {
+            return (this.state.currentLang === content.langCode) ? content.text : "";
+          })}
         </div>
       </div>
     );

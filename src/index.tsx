@@ -19,7 +19,9 @@ interface jyiArticle {
 
 let testjyiArticleContent: jyiArticleContent[] = [
   {langCode: 'en', text: 'This is an example of text in English'}, 
-  {langCode: 'es', text: 'Este es un ejemplo de texto en español'}
+  {langCode: 'es', text: 'Este es un ejemplo de texto en español'},
+  {langCode: 'zh', text: '这是中文汉字。'},
+  {langCode: 'fr', text: 'Baguette'},
 ]
 
 let testjyiArticle: jyiArticle = {
