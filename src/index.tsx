@@ -7,7 +7,7 @@ import reportWebVitals from './reportWebVitals';
 interface jyiArticleContent {
   // ISO 639 code to identify language; 'en' for English, 'es' for Spanish, etc.
   // You don't have to store display name of language ('English' for 'en' for example), get it using this: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/DisplayNames
-  langCode: string;
+  langCode: keyof typeof Language;
   // Text of the article in the language specified.
   text: string;
 };
@@ -15,6 +15,13 @@ interface jyiArticleContent {
 interface jyiArticle {
   id: string;
   content: jyiArticleContent[];
+};
+
+enum Language {
+  en='English',
+  es='Español',
+  fr='Français',
+  zh='中國人'
 };
 
 let testjyiArticleContent: jyiArticleContent[] = [

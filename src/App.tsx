@@ -5,7 +5,7 @@ interface jyiArticleContent {
   // ISO 639 code to identify language; 'en' for English, 'es' for Spanish, etc.
   // See list here: https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
   // You don't have to store display name of language ('English' for 'en' for example), get it using this: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/DisplayNames
-  langCode: string;
+  langCode: keyof typeof Language;
   // Text of the article in the language specified.
   // Don't worry about the format of the text - just render it as it is given.
   text: string;
@@ -15,6 +15,13 @@ interface jyiArticle {
   id: string;
   content: jyiArticleContent[];
 };
+
+enum Language {
+  en='English',
+  es='Español',
+  fr='Français',
+  zh='中國人'
+}
 
 type MyProps = {
   article: jyiArticle
@@ -41,10 +48,12 @@ class LanguageSwitcher extends React.Component<MyProps, MyState> {
       <div>
         <div className="lang-options">
           {
-            this.state.article.content.map( ( content: jyiArticleContent) => {
-              return <div className="lang-option" lang={content.langCode} onClick={this.handleClick} current-lang={ ((this.state.currentLang === content.langCode) ? "true" : "false")}>
-                {content.langCode}
+            this.state.article.content.map( ( content: jyiArticleContent ) => {
+              return (
+              <div className="lang-option" lang={content.langCode} onClick={this.handleClick} current-lang={this.state.currentLang === content.langCode ? "true" : "false"}>
+                {Language[content.langCode]}
               </div>
+              )
             })
           }
         </div>
