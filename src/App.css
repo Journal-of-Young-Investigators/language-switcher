@@ -3,6 +3,7 @@
   flex-flow: row nowrap;
   justify-content: flex-end;
   align-items: stretch;
+  margin-right: 15em;
 }
 
 .lang-option {
@@ -12,6 +13,10 @@
   justify-content: flex-end;
   align-items: center;
   border-radius: 0.25em;
+}
+
+.lang-option:hover {
+  background-color : rgba(128, 128, 128, 0.411);
 }
 
 .lang-option[current-lang="true"] {
@@ -24,22 +29,29 @@
   flex-flow: column;
   justify-content: center;
   align-items: left;
-  margin-left: 2em;
-  margin-right: 2em;
+  padding: 1em 1em 1em 1em;
+  margin-top: 1em;
+  margin-left: 15em;
+  margin-right: 15em;
+  border-style: solid;
+  border-color: #011e48;
+  border-radius: 10px;
 }
 
 .article-content h2 {
   margin: 0;
   padding: 0;
+  font-weight: normal;
 }
 
 .article-content h3 {
   margin: 0;
   padding: 0;
+  font-weight: normal;
 }
 
 .article-content .date {
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 
 .article-content p {

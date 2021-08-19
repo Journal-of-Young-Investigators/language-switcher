@@ -45,11 +45,11 @@ class LanguageSwitcher extends React.Component<MyProps, MyState> {
     this.setState({ currentLang: event.currentTarget.lang });
   };
 
-  formatAuthorsOrTranslators = (authors: string[]) => {
-    let formatted: string = '';
-    for (let i = 0; i < authors.length; i++) {
-      formatted += authors;
-      if (i < authors.length-1) formatted += ', ';
+  formatAuthorsOrTranslators = (names: string[]) => {
+    let formatted = '';
+    for (let i = 0; i < names.length; i++) {
+      formatted += names[i];
+      if (i !== names.length-1) formatted += ', ';
     }
     
     return formatted;
