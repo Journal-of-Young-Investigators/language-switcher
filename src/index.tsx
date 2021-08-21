@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import LanguageSwitcher from './App';
+import { LanguageSwitcher } from './components/lang-switcher';
 import reportWebVitals from './reportWebVitals';
 
 interface jyiArticleContent {
