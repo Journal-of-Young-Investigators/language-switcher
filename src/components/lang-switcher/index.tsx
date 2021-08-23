@@ -39,7 +39,7 @@ export class LanguageSwitcher extends React.Component<MyProps, MyState> {
 
     state: MyState = {
       article: this.props.article,
-      currentLang: 'en',
+      currentLang: this.props.article.content[0].langCode,
     };
   
     handleClick = (event: React.MouseEvent<HTMLDivElement>) => {
