@@ -1,32 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import { LanguageSwitcher } from './components/lang-switcher';
 import reportWebVitals from './reportWebVitals';
-
-interface jyiArticleContent {
-  // ISO 639 code to identify language; 'en' for English, 'es' for Spanish, etc.
-  // See list here: https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
-  // You don't have to store display name of language ('English' for 'en' for example), get it using this: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/DisplayNames
-  langCode: keyof typeof Language;
-  title: string;
-  date: string;
-  authors: string[];
-  translators?: string[];
-  body: string;
-};
-
-interface jyiArticle {
-  id: string;
-  content: jyiArticleContent[];
-};
-
-enum Language {
-  en='English',
-  es='Español',
-  fr='Français',
-  zh='中國人'
-};
+import { LanguageSwitcher, jyiArticle, jyiArticleContent } from 'jyi-components';
 
 let testjyiArticleContent: jyiArticleContent[] = [
   {langCode: 'en', title: 'Nanoparticles: the Future of Drug Delivery', date: 'January 1, 2020', authors: ['Syed Haider'], 
