@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ChangeEventHandler } from 'react';
 import './lang-switcher.css'
 
 interface jyiArticleContent {
@@ -11,7 +11,7 @@ interface jyiArticleContent {
     authors: string[];
     translators?: string[];
     body: string;
-  };
+};
 
 interface jyiArticle {
     id: string;
@@ -41,9 +41,9 @@ export class LanguageSwitcher extends React.Component<MyProps, MyState> {
       article: this.props.article,
       currentLang: this.props.article.content[0].langCode,
     };
-  
-    handleClick = (event: React.MouseEvent<HTMLDivElement>) => {
-      this.setState({ currentLang: event.currentTarget.lang });
+
+    handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+      this.setState({ currentLang: event.currentTarget.value });
     };
   
     formatAuthorsOrTranslators = (names: string[]) => {
@@ -59,16 +59,16 @@ export class LanguageSwitcher extends React.Component<MyProps, MyState> {
     render() {
       return (
         <div>
-          <div className="lang-options">
+          <div className="select-area">
+            <select className="lang-select" value={this.state.currentLang} onChange={this.handleChange}>
             {
               this.state.article.content.map( (content: jyiArticleContent) => {
                 return (
-                <div className="lang-option" lang={content.langCode} onClick={this.handleClick} current-lang={this.state.currentLang === content.langCode ? "true" : "false"}>
-                  {Language[content.langCode]}
-                </div>
+                  <option value={content.langCode}>{Language[content.langCode]}</option>
                 )
               })
             }
+            </select>
           </div>
           <div className="article-content">
             {this.state.article.content.map( ( content: jyiArticleContent ) => {
