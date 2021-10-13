@@ -18,11 +18,15 @@ let testjyiArticle: jyiArticle = {
   content: testjyiArticleContent
 }
 
+let element = document.getElementById('JYILangSwitcher');
+
+
 ReactDOM.render(
   <React.StrictMode>
-    <LanguageSwitcher article={testjyiArticle}/>
+    <LanguageSwitcher article={
+     (element && element.dataset.article) ? element.dataset.article as unknown as jyiArticle : testjyiArticle}/>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById('JYILangSwitcher')
 );
 
 // If you want to start measuring performance in your app, pass a function
