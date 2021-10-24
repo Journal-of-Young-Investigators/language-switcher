@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import { LanguageSwitcher, jyiArticle, jyiArticleContent } from 'jyi-components';
+import { LanguageSwitcher, jyiArticle, jyiArticleContent } from 'jyi-lib';
 
 let testjyiArticleContent: jyiArticleContent[] = [
   {langCode: 'en', title: 'Nanoparticles: the Future of Drug Delivery', date: 'January 1, 2020', authors: ['Syed Haider'], 
